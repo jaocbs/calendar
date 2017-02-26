@@ -1,0 +1,137 @@
+@import url(font-awesome.min.css);
+@import url(normalize.css);
+@import url(reset.css);
+@import url(grid.css);
+@import url(reset.css);
+@import url(bootstrap.css);
+
+
+@font-face {
+    font-family: AvenirLTStd;
+    src: url('../font/AvenirLTStd-Medium.otf');
+}
+
+
+
+html {
+    font-size: 62.5%; /* rem = 10px */
+    height: 100%;
+    width: 100%;
+    font-family: AvenirLTStd;
+}
+
+body {
+    font-size: 1.6rem;
+    margin: 50px;
+    padding: 0;
+    /*background: url('/img/cover.jpg');*/
+    background: #A6A6A6;
+}
+
+#wrapper{
+    box-sizing: border-box;
+}
+
+.calendar{
+    box-sizing: border-box;
+    height: 690px;
+    width: 700px;
+    margin: 0 auto;
+}
+.setka{
+    background: #818181;
+    height: 600px;
+}
+
+.calendar .day{
+    float: left;
+    width: 9.6rem;
+    height: 9.6rem;
+    box-sizing: border-box;
+    border: 1px solid silver;
+    margin: 0.2rem;
+  
+    overflow: hidden;
+    background: #F3F3F3;
+}
+
+.today {
+    color: red;
+}
+
+.calMenu{
+    width: 100%;
+    height: 5rem;
+}
+.calMenu{
+    text-align: center;
+}
+.currentCal p{
+    width: 50%;
+    float: left;
+    height: 100%;
+    padding: 1rem 0;
+    color: white;
+}
+.nextMonth, .lastMonth{
+    height: 100%;
+    padding: 1rem 0;
+    color: white;
+    font-size: 3rem;
+}
+
+.weekDay{
+    float: left;
+    width: 10rem;
+    height: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+.daysWeek{
+    height: 4rem;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.days{
+    width: 100%;
+    background: #B5B5B5;
+    overflow: hidden;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#null{
+    visibility: hidden;
+}
+
+.newTask{
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    background: #565656;
+    border-radius: 5px;
+    top: 19rem;
+    left: 59.4rem;
+}
+.task{
+    font-size: 1rem;
+    color: cornflowerblue;
+    position: relative;
+    font-family: AvenirLTStd;
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    font-family: AvenirLTStd;
+}
+.close:hover{
+    font-size: 3rem;
+    color: red;
+}

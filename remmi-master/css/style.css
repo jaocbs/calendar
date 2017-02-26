@@ -1,0 +1,612 @@
+@import url(font-awesome.min.css);
+@import url(normalize.css);
+@import url(reset.css);
+@import url(grid.css);
+@font-face {
+    font-family: Avenir;
+    src: url('../fonts/AvenirLTStd-Black.otf');
+}
+@font-face {
+    font-family: AvenirHavy;
+    src: url('../fonts/AvenirLTStd-Heavy.otf');
+}
+@font-face {
+    font-family: AvenirMedium;
+    src: url('../fonts/AvenirLTStd-Medium.otf');
+}
+html {
+    font-size: 62.5%; /* rem = 10px */
+    height: 100%;
+    width: 100%;
+    font-family: Avenir;
+}
+
+body {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    box-sizing: border-box;
+}
+/* white style */
+.whitePage header{
+    background: white;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.6);
+}
+.whitePage .content{
+    color: #CCCCCC;
+}
+.whitePage footer{
+    background: white;
+    border-top: 1px solid rgba(204, 204, 204, 0.6);
+}
+.whitePage #today div{
+    background: #F33B64;
+}
+.whitePage #upcoming div{
+    background: #FF8C00;
+}
+
+.whitePage #future div{
+    background: #3BA4F3;
+}
+.whitePage header #today{
+    color: #F33B64;
+}
+.whitePage .headerlinks{
+    color: rgba(204, 204, 204, 0.6);
+}
+.whitePage .inputTask{
+    border: 1px solid rgba(204, 204, 204, 0.6);
+    color: #333;
+}
+.whitePage .footerVoice {
+    color: #3BA4F3;
+    border-right: 1px solid rgba(204, 204, 204, 0.6);
+}
+.whitePage .option {
+    color: #3BA4F3;
+}
+.whitePage .option ul a {
+    color: #3BA4F3;
+}
+.whitePage .oops{    
+    color:rgba(204, 204, 204, 0.6);
+}
+.whitePage .task{
+    color: white;
+}
+.whitePage .dateTask{
+    color: rgba(255, 255,255, 0.7); 
+}
+.whitePage .modal-container ul {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.whitePage .modal-container li {
+    color: black;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.6);
+}
+.whitePage .modal-container li:hover {
+    background: rgba(204, 204, 204, 0.5);
+}
+
+.whitePage .modal:before {
+    background-color: rgba(0,0,0,.8);
+}
+.whitePage .closeSett i{
+    color: white;
+}
+.whitePage .closeSett i:hover {
+    color: rgba(204, 204, 204, 0.5);
+}
+
+/*dark style*/
+
+
+.darkPage header{
+    background: black;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.6);
+}
+.darkPage .content{
+    color: #CCCCCC;
+}
+.darkPage .main{
+    background: black;
+}
+.darkPage footer{
+    background: #141414;
+    border-top: 1px solid rgba(204, 204, 204, 0.6);
+}
+.darkPage #today div{
+    background: #F33B64;
+}
+.darkPage #upcoming div{
+    background: #FF8C00;
+}
+
+.darkPage #future div{
+    background: #3BA4F3;
+}
+.darkPage header #today{
+    color: #F33B64;
+}
+.darkPage .headerlinks{
+    color: #CCCCCC;
+}
+.darkPage .inputTask{
+    border: 1px solid rgba(204, 204, 204, 0.6);
+    color: white;
+    background: black;
+}
+.darkPage .footerVoice {
+    color: #50E3C2;
+    border-right: 1px solid rgba(204, 204, 204, 0.6);
+}
+.darkPage .option {
+    color: #50E3C2;
+}
+.darkPage .option ul a {
+    color: #3BA4F3;
+}
+.darkPage .oops{    
+    color:rgba(204, 204, 204, 0.6);
+}
+.darkPage .task{
+    color: white;
+}
+.darkPage .dateTask{
+    color: rgba(255, 255,255, 0.7); 
+}
+.darkPage .modal-container ul {
+    background: black;
+}
+.darkPage .modal-container li {
+    color: white;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.1);
+}
+.darkPage .modal-container li:hover {
+    background: rgba(204, 204, 204, 0.1);
+}
+
+.darkPage .modal:before {
+    background-color: rgba(0,0,0,.8);
+}
+.darkPage .closeSett i{
+    color: white;
+}
+.darkPage .closeSett i:hover {
+    color: rgba(204, 204, 204, 0.1);
+}
+
+header {
+    /*height: 5rem;*/
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+
+.content{
+    /*height: 54rem;*/
+    /*display: block;
+    position: absolute;
+    top: 5rem;
+    left: 0;*/
+
+    position: absolute;
+	top: 35%;
+	left: 0%;
+	height: 30%;
+	width: 100%;
+}
+
+
+.nameApp p{
+    color: #3BA4F3;
+    margin: 1rem auto;
+    font-size: 3rem;
+    /*height: 25rem;*/
+    text-align: center;
+    /*vertical-align: bottom;*/
+    display: block;
+    
+}
+
+
+footer{
+    /*height:  4rem;*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/*form {
+    text-align: center;
+}
+form label{
+    padding-right: 1rem;
+    font-size: 2rem;
+}*/
+.inputLogin{
+    height: 3rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 1.5rem;
+    padding: 6px 12px;
+    color: #333;
+    display: block;
+    margin: 1rem auto;
+
+}
+
+
+.btn{
+    margin: 5rem;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border: 1px solid #CCCCCC;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin: 1rem auto;
+}
+
+.btn:hover{
+    background: #ccc;
+}
+
+.headerlinks {
+    display: block;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    width: 33%;
+    font-size: 2rem;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+
+.inputTask{
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem 0;
+    float: left;
+    box-sizing: border-box;
+}
+
+.footerVoice {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 5rem;
+    float: left;
+    box-sizing: border-box;
+}
+
+.option {
+    height: 5rem;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    font-size: 3.5rem;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+
+.option ul{
+    font-family: AvenirHavy;
+    position: absolute;
+    bottom: 5rem;
+    right: 100%;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.7rem;
+    
+}
+
+.option ul a {
+    text-decoration: none;
+}
+
+/*main*/
+
+.main{
+    position: absolute;
+    top: 5rem;
+    overflow: auto;
+    box-sizing: border-box;
+    z-index: 1;
+    bottom: 5rem;
+}
+
+.oops{
+    position: fixed;
+	top: 35%;
+	left: 0%;
+	height: 30%;
+	width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.today, .upcoming, .future{
+    display: none;
+}
+
+.task{
+    width: 95%;
+    margin: 1rem auto;
+    font-size: 3rem;
+    border-radius: 4px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.dateTask{
+    padding: 2rem 0 0 0; 
+    font-weight: bold; 
+    font-size: 1.4rem; 
+    font-family: AvenirMedium;
+}
+
+.dateTask i{
+    margin-left: 1rem;
+}
+
+.active{
+    display: block;
+}
+
+
+/*modal*/
+
+
+
+.modal-container {
+    position: fixed;   
+    width: 100%;
+    box-sizing: border-box;
+    bottom: -100%;  
+    z-index: 102;
+}
+
+.modal-container div{
+    height: 96px;
+    line-height: 96px;
+    text-align: center;
+    width: 3rem;
+    margin: 0 auto;
+}
+
+.modal-container a{
+    display: block;
+    position: relative;
+    font-size: 3rem;
+    width: 3rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.modal-container ul {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    float: left;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal-container li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1rem;
+}
+.modal:before {
+    content: "";
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 101;
+    
+}
+
+
+.modal:target:before {
+    display: block;
+    
+}
+
+.modal:target .modal-container {
+    bottom: 0%;
+}
+
+.closeSett i{
+    margin: 0 auto;
+    font-size: 3rem;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+
+.slideUp{
+    animation-name: slideUp;  
+    animation-duration: 1s; 
+    animation-timing-function: ease;
+    visibility: visible !important;         
+}
+ 
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    /*50%{
+        transform: translateY(-8%);
+    }
+    65%{
+        transform: translateY(4%);
+    }
+    80%{
+        transform: translateY(-4%);
+    }
+    95%{
+        transform: translateY(2%);
+    }           */
+    100% {
+        transform: translateY(0%);
+    }   
+}
+ 
+.slideDown{
+    animation-name: slideDown;
+    animation-duration: 1s; 
+    animation-timing-function: ease;    
+    visibility: visible !important;                     
+}
+ 
+@keyframes slideDown {
+    0% {
+        transform: translateY(0%);
+        }
+    /*
+    50%{
+        transform: translateY(10%);
+    }
+    65%{
+        transform: translateY(15%);
+    }
+    80%{
+        transform: translateY(50%);
+    }
+    95%{
+        transform: translateY(70%);
+    }           */
+    100% {
+        transform: translateY(200%);
+    }       
+}
+ 
+.constTask{
+    z-index: 555;
+    display: block;
+    /*background: black;*/
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+.closeConst{
+    box-sizing: border-box;
+    padding: 2rem 0 2rem 2rem;
+    font-size: 3rem;
+    color: rgba(204, 204, 204, 0.6);
+}
+.inputDiv{
+    position: relative;
+    text-align: center;
+    width: 98%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.inputConst{
+    width: 95%;
+    margin: 1rem auto;
+    font-size: 3rem;
+    border-radius: 4px;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: none;
+}
+.naviConst{
+    position: relative;
+    box-sizing: border-box;
+    margin: 1rem 0;
+
+}
+.dateRemember, .remember{
+    font-size: 1rem;
+    border: 2px solid rgba(204, 204, 204, 0.6);
+    color: rgba(204, 204, 204, 0.8);
+    border-radius: 5rem;
+    padding: 0.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.next{
+    font-size: 2.5rem;
+    border-radius: 5px;
+    text-align: right;
+    box-sizing: border-box;
+    color: #50E3C2;
+}
+
+.inputDiv TEXTAREA[type="text"] {
+    font-size: 3rem;
+    font-family: Avenir;
+}
+
+footer INPUT[type="text"] {
+    font-size: 1.4rem;
+    font-family: AvenirHavy;
+}
+.calendar{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+}
+
+.calendar .day, .dayweek{
+    float: left;
+    width: 14.03%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.today {
+    color: red;
+}
+
+.calMenu{
+    width: 100%;
+}
+.calMenu{
+    text-align: center;
+    padding: 1rem 0;
+    border: 1px solid rgba(204, 204, 204, 0.6);
+    box-sizing: border-box;
+}
+.currentCal p{
+    width: 50%;
+    float: left;
+}
+.calend{
+	font-size: 1.2rem;
+}
